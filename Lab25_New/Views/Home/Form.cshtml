@@ -1,0 +1,24 @@
+﻿@model Lab25_New.Models.FormResponse
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Form</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {   @Html.ValidationSummary();
+        <h2>Please fill out the form below:</h2>
+        <p><b> First Name: @Html.TextBoxFor(x => x.FirstName)</b> </p>
+        <p><b>Last Name: @Html.TextBoxFor(x => x.LastName)</b></p>
+        <p><b>Age: @Html.TextBoxFor(x => x.Age)</b></p>
+        <input type="submit" value="Submit Registration" />
+    }
+</body>
+</html>
